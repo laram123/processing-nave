@@ -20,7 +20,7 @@ class Nave {
   public Nave(int x, int y, int tam, int r, int g, int b) {
     _posicao = new PVector(x, y);
     _direcao = new PVector(0, -1);
-    _velocidade = 5;
+    _velocidade = 1;
     _tam = tam;
     _r = r;
     _g = g;
@@ -39,6 +39,14 @@ class Nave {
   
   public void moveEmFrente() {
     _posicao.add(PVector.mult(_direcao, _velocidade));
+  }
+  
+  public void acelera() {
+    _velocidade++;
+  }
+  
+  public void freia() {
+    if (_velocidade > 0) _velocidade--;
   }
   
 }
