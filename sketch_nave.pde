@@ -19,3 +19,7 @@ void draw() {
   n1.desenha();
   n2.desenha();
 }
+
+void keyPressed() {
+  n2.moveEmFrente();
+}

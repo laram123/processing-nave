@@ -1,6 +1,8 @@
 class Nave {
   
   PVector _posicao;
+  PVector _direcao;
+  int _velocidade;
   
   int _tam = 25;
   
@@ -8,6 +10,8 @@ class Nave {
   
   public Nave(int x, int y, int r, int g, int b) {
     _posicao = new PVector(x, y);
+    _direcao = new PVector(0, -1);
+    _velocidade = 1;
     _r = r;
     _g = g;
     _b = b;
@@ -15,6 +19,8 @@ class Nave {
   
   public Nave(int x, int y, int tam, int r, int g, int b) {
     _posicao = new PVector(x, y);
+    _direcao = new PVector(0, -1);
+    _velocidade = 5;
     _tam = tam;
     _r = r;
     _g = g;
@@ -29,6 +35,10 @@ class Nave {
   public void atualizaPosicao(int x, int y) {
     _posicao.x = x;
     _posicao.y = y;
+  }
+  
+  public void moveEmFrente() {
+    _posicao.add(PVector.mult(_direcao, _velocidade));
   }
   
 }
