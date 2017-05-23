@@ -10,7 +10,7 @@ class Nave {
   
   public Nave(int x, int y, int r, int g, int b) {
     _posicao = new PVector(x, y);
-    _direcao = new PVector(0, -1);
+    _direcao = new PVector(1, 0);
     _velocidade = 1;
     _r = r;
     _g = g;
@@ -19,8 +19,8 @@ class Nave {
   
   public Nave(int x, int y, int tam, int r, int g, int b) {
     _posicao = new PVector(x, y);
-    _direcao = new PVector(0, -1);
-    _velocidade = 1;
+    _direcao = new PVector(1, 0);
+    _velocidade = 0;
     _tam = tam;
     _r = r;
     _g = g;
@@ -29,7 +29,10 @@ class Nave {
   
   public void desenha() {
     fill(_r, _g, _b);
-    triangle(_posicao.x, _posicao.y - _tam, _posicao.x + _tam, _posicao.y + _tam, _posicao.x - _tam, _posicao.y + _tam);
+    // triangle(_posicao.x, _posicao.y - _tam, _posicao.x + _tam, _posicao.y + _tam, _posicao.x - _tam, _posicao.y + _tam);
+    triangle(_posicao.x + _tam, _posicao.y, _posicao.x - _tam, _posicao.y + _tam, _posicao.x - _tam, _posicao.y - _tam);
+    // fill(255);
+    // ellipse(_posicao.x, _posicao.y, 1, 1);
   }
   
   public void atualizaPosicao(int x, int y) {

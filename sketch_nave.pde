@@ -6,8 +6,9 @@ Nave n1, n2;
 void setup() {
   // em p5.js => createCanvas(...);
   size(640, 480);
-  n1 = new Nave(320, 240, 255, 0, 0);
-  n2 = new Nave(320, 480, 30, 0, 255, 0);
+  noCursor();
+  n1 = new Nave(320, 240, 0, 0, 255);
+  n2 = new Nave(0, 240, 30, 0, 255, 0);
 }
 
 // eh executada aproximadamente 60 vezes por segundo,
@@ -26,5 +27,9 @@ void keyPressed() {
     n2.acelera();
   } else if (keyCode == DOWN) {
     n2.freia();
+  } else if (keyCode == LEFT) {
+    System.out.println("Sentido anti-horario");
+  } else if (keyCode == RIGHT) {
+    System.out.println("Sentido horario");
   }
 }
