@@ -28,8 +28,8 @@ void keyPressed() {
   } else if (keyCode == DOWN) {
     n2.freia();
   } else if (keyCode == LEFT) {
-    System.out.println("Sentido anti-horario");
+    n2.giraSentidoAntiHorario();
   } else if (keyCode == RIGHT) {
-    System.out.println("Sentido horario");
+    n2.giraSentidoHorario();
   }
 }
