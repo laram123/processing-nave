@@ -11,7 +11,7 @@ class Nave {
   public Nave(int x, int y, int r, int g, int b) {
     _posicao = new PVector(x, y);
     _direcao = new PVector(1, 0);
-    _velocidade = 1;
+    _velocidade = 0;
     _r = r;
     _g = g;
     _b = b;
